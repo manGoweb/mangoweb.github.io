@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SpecVisualize Enum Reference</title>
+    <title>Property Struct Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/SpecVisualize" class="dashAnchor"></a>
-    <a title="SpecVisualize Enum Reference"></a>
+    <a name="//apple_ref/swift/Struct/Property" class="dashAnchor"></a>
+    <a title="Property Struct Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">SpecTools Docs</a> (98% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">SpecTools Reference</a>
         <img id="carat" src="../img/carat.png" />
-        SpecVisualize Enum Reference
+        Property Struct Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -39,10 +39,10 @@
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/SpecDeviceScreenSize.html">SpecDeviceScreenSize</a>
+                <a href="../Enums/DeviceScreenSize.html">DeviceScreenSize</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/SpecVisualize.html">SpecVisualize</a>
+                <a href="../Enums/VisualizationType.html">VisualizationType</a>
               </li>
             </ul>
           </li>
@@ -70,7 +70,7 @@
                 <a href="../Structs/Prepare.html">Prepare</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/SpecProperty.html">SpecProperty</a>
+                <a href="../Structs/Property.html">Property</a>
               </li>
             </ul>
           </li>
@@ -79,14 +79,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>SpecVisualize</h1>
+            <h1>Property</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SpecVisualize</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Property</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p>Visualization types</p>
+            <p>Main holding property. Any supported view or object will have .spec property available</p>
 
           </section>
           <section class="section task-group-section">
@@ -95,9 +95,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SpecTools0A9VisualizeO4noneA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/none" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SpecTools0A9VisualizeO4noneA2CmF">none</a>
+                    <a name="/s:9SpecTools8PropertyV5checkAA5CheckVyxGv"></a>
+                    <a name="//apple_ref/swift/Property/check" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SpecTools8PropertyV5checkAA5CheckVyxGv">check</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -105,30 +105,27 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>No visualization</p>
+                        <p>Contains checks on supported elements
+(like isVisible or hasSiblings, etc)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="k">none</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">check</span><span class="p">:</span> <span class="kt"><a href="../Structs/Check.html">Check</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SpecTools0A9VisualizeO7classesA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/classes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SpecTools0A9VisualizeO7classesA2CmF">classes</a>
+                    <a name="/s:9SpecTools8PropertyV4findAA4FindVyxGv"></a>
+                    <a name="//apple_ref/swift/Property/find" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SpecTools8PropertyV4findAA4FindVyxGv">find</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -136,30 +133,27 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Show classes only</p>
+                        <p>If you are looking for something, find is your guy
+(You can find text, recurse through UIView structures, etc)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">classes</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">find</span><span class="p">:</span> <span class="kt"><a href="../Structs/Find.html">Find</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SpecTools0A9VisualizeO6framesA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/frames" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SpecTools0A9VisualizeO6framesA2CmF">frames</a>
+                    <a name="/s:9SpecTools8PropertyV7prepareAA7PrepareVyxGv"></a>
+                    <a name="//apple_ref/swift/Property/prepare" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SpecTools8PropertyV7prepareAA7PrepareVyxGv">prepare</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -167,30 +161,27 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Show classes and frames</p>
+                        <p>Prepares supported elements
+(like prepare view controllers for testing, etc)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">frames</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">prepare</span><span class="p">:</span> <span class="kt"><a href="../Structs/Prepare.html">Prepare</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SpecTools0A9VisualizeO4textA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/text" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SpecTools0A9VisualizeO4textA2CmF">text</a>
+                    <a name="/s:9SpecTools8PropertyV6actionAA6ActionVyxGv"></a>
+                    <a name="//apple_ref/swift/Property/action" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SpecTools8PropertyV6actionAA6ActionVyxGv">action</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -198,45 +189,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Show classes and text if available</p>
+                        <p>Actions on supported elements
+(like tap on a button or execute a gesture recognizers targets)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">text</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SpecTools0A9VisualizeO3allA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/all" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SpecTools0A9VisualizeO3allA2CmF">all</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Show classes, frames and text if available</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">all</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../Structs/Action.html">Action</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -248,7 +209,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/manGoweb/SpecTools" target="_blank" rel="external">Ondrej Rafaj</a>. All rights reserved. (Last updated: 2017-09-12)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/manGoweb/SpecTools" target="_blank" rel="external">Ondrej Rafaj</a>. All rights reserved. (Last updated: 2017-09-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
